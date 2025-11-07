@@ -1,5 +1,24 @@
 import 'package:flutter/material.dart';
 import 'chat_page.dart';
+import 'devices/devices_wizard_page.dart';
+
+actions: [
+  IconButton(
+    tooltip: "Pesquisar",
+    onPressed: () {},
+    icon: const Icon(Icons.search),
+  ),
+  IconButton(
+    tooltip: "Dispositivos",
+    onPressed: () {
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (_) => const DevicesWizardPage()),
+      );
+    },
+    icon: const Icon(Icons.bluetooth),
+  ),
+],
+
 
 class ConversationItem {
   final String id;
